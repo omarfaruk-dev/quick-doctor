@@ -8,11 +8,13 @@ import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
 import Blogs from '../pages/Blogs';
 import MyBookings from '../pages/MyBookings';
+import ErrorPage from '../pages/ErrorPage';
 
   const router = createBrowserRouter([
     {
         path: '/',
         Component: MainLayout,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 index: true,
