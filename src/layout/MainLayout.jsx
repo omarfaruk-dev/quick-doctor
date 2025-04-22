@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const MainLayout = () => {
     return (
-        <div className=' bg-[#EFEFEF] px-5'>
+        <div className=' bg-[#EFEFEF]'>
             <div className='container mx-auto'>
                 <Nav />
             </div>
