@@ -5,10 +5,14 @@ import Footer from '../components/Footer';
 
 const MainLayout = () => {
     return (
-        <div>
-            <Nav/>
-            <Outlet/>
-            <Footer/>
+        <div className=' bg-[#EFEFEF] px-5'>
+            <div className='container mx-auto'>
+                <Nav />
+            </div>
+            <div className='container mx-auto'>
+                <Outlet />
+            </div>
+            <Footer />
         </div>
     );
 };
