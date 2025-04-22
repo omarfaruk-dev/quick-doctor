@@ -18,6 +18,7 @@ import ErrorPage from '../pages/ErrorPage';
         children: [
             {
                 index: true,
+                loader: ()=> fetch('doctors.json'),
                 Component: Home
             },
             {
