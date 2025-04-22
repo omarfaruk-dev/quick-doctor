@@ -18,7 +18,7 @@ const Footer = () => {
                 <ul>
                     <li>{links}</li>
                 </ul>
-                <hr className='border-t-2 border-gray-700 border-dashed w-full ' />
+                <hr className='border-t-2 border-gray-200 w-3/4 ' />
                 <div className='text-2xl md:text-3xl flex flex-wrap gap-4'>
                     <a href='https://github.com/omarfaruk-dev' target='blank'><FaGithub /> </a>
                     <a href='https://www.linkedin.com/in/pro-omarfaruk' target='blank'><FaLinkedin /> </a>
