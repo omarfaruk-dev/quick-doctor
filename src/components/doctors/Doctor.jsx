@@ -21,7 +21,7 @@ const Doctor = ({ doctor }) => {
                 <hr className='border-t-2 border-gray-300 border-dashed'/>
                 <p className='text-lg text-[#0F0F0F99]'>{speciality}</p>
                 <p className='text-[#0F0F0FB3] flex items-center gap-2'><span className='text-xl'>®</span> {license}</p>
-                <Link to={`lawyer-details/${license}`}><button className='cursor-pointer text-[#176AE5] border-2 border-[#176AE5] hover:bg-[#176AE5] hover:text-white transition-all py-2 w-full rounded-4xl'>View Details</button></Link>
+                <Link to={`doctor-details/${license}`}><button className='cursor-pointer text-[#176AE5] border-2 border-[#176AE5] hover:bg-[#176AE5] hover:text-white transition-all py-2 w-full rounded-4xl'>View Details</button></Link>
             </div>
         </div>
     );
