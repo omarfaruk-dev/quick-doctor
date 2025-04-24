@@ -8,6 +8,9 @@ import MyBookings from '../pages/MyBookings';
 import ErrorPage from '../pages/ErrorPage';
 import Loader from '../components/ui/Loader';
 import ViewDetails from '../pages/ViewDetails/ViewDetails';
+import BlogDetail from '../pages/BlogDetail';
+import Contact from '../pages/Contact';
+import Emergency from '../pages/Emergency';
 
 const router = createBrowserRouter([
   {
@@ -35,8 +38,23 @@ const router = createBrowserRouter([
       },
       {
         path: '/blogs',
+        hydrateFallbackElement: <Loader />,
+        loader: () =>fetch('../blogs.json'),
         Component: Blogs
       },
+      {
+        path: '/blogs/:blogId',
+        loader: () =>fetch('../blogs.json'),
+        Component: BlogDetail
+      },
+      {
+        path: '/contact-us',
+        Component: Contact
+      },
+      {
+        path: '/emergency',
+        Component: Emergency
+      }
     ]
 
   },

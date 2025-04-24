@@ -1,0 +1,45 @@
+[
+  {
+    "id": "healthy-eating-for-kids",
+    "title": "Healthy Eating for Kids",
+    "summary": "Tips to keep your children’s nutrition on track.",
+    "image": "https://www.keckmedicine.org/wp-content/uploads/2021/11/Medical-doctors-and-nurse-practitioners-discuss-paperwork-in-a-hallway.jpg",
+    "category": "Childcare"
+  },
+  {
+    "id": "mental-health-awareness",
+    "title": "Mental Health Awareness for Everyone",
+    "summary": "Why mental health should be a daily discussion.",
+    "image": "https://www.mua.edu/uploads/sites/10/2023/02/istock-482499394.webp",
+    "category": "Mental Wellness",
+    "featured": true
+  },
+  {
+    "id": "5-daily-skin-care-habits",
+    "title": "5 Daily Skin Care Habits for Glowing Skin",
+    "summary": "Simple habits that transform your skin health.",
+    "image": "https://www.getrael.com/cdn/shop/articles/December_Blog_Banners_Benefits_of_Organic_Skin_Care_Products.png?v=1641404707",
+    "category": "Skin Care"
+  },
+  {
+    "id": "nutritional-guide-for-adults",
+    "title": "Nutritional Guide for Adults",
+    "summary": "Balance your diet with these practical nutrition tips.",
+    "image": "https://nbpns.org/wp-content/uploads/2016/09/NBPNS-prescribing-food-1440x570.jpeg",
+    "category": "Nutrition"
+  },
+  {
+    "id": "nutritional-guide-for-mental-health",
+    "title": "Nutritional Guide for Adults",
+    "summary": "Balance your diet with these practical nutrition tips.",
+    "image": "https://nbpns.org/wp-content/uploads/2016/09/NBPNS-prescribing-food-1440x570.jpeg",
+    "category": "Mental Wellness"
+  },
+  {
+    "id": "healthy-nutrition-for-kids",
+    "title": "Healthy Eating for Kids",
+    "summary": "Tips to keep your children’s nutrition on track.",
+    "image": "https://images.squarespace-cdn.com/content/v1/5fdaee74c01c383b278de11e/1625539942781-VC8ZNXLR6LZJ4Y7WDFVT/All-Saints-Medical-Practice-children-health.jpg",
+    "category": "Childcare"
+  }
+]

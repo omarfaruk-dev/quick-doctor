@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import Button from './ui/Button';
+import logo from '../assets/logo.png'
 
 const Nav = () => {
+    const navigate = useNavigate();
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = <div className='flex flex-col md:flex-row gap-3 md:gap-6 text-gray-800 md:text-lg '>
         <NavLink to='/'>Home</NavLink>
@@ -14,7 +17,7 @@ const Nav = () => {
         <div className="container px-4 py-5 mx-auto md:px-6 lg:px-10">
             <div className="relative flex items-center justify-between">
                 <Link className="inline-flex items-center">
-                    <img className='w-40' src='logo.png' alt="logo" />
+                    <img className='w-40' src={logo} alt="logo" />
                     <span className="ml-2 text-2xl font-bold tracking-wide text-gray-800 uppercase">
 
                     </span>
@@ -24,7 +27,7 @@ const Nav = () => {
                 </ul>
                 <ul className="items-center hidden space-x-8 lg:flex">
                     <li>
-                        <Button label='Emergency' />
+                        <Button onClick={()=>navigate('./emergency')} label='Emergency' />
                     </li>
                 </ul>
                 <div className="lg:hidden">
@@ -54,7 +57,7 @@ const Nav = () => {
                             <div className="p-5 bg-white border border-[#176AE5] rounded shadow-sm">
                                 <div className="flex items-center justify-between mb-4">
                                     <Link className="inline-flex items-center">
-                                        <img className='w-40' src='logo.png' alt="logo" />
+                                        <img className='w-40' src={logo} alt="logo" />
                                     </Link>
                                     <div>
                                         <button
@@ -76,7 +79,7 @@ const Nav = () => {
                                     <ul className="space-y-4">
                                         <li>{links}</li>
                                         <li>
-                                            <Button label='Emergency' />
+                                            <Button  onClick={()=>navigate('./emergency')} label='Emergency' />
                                         </li>
                                     </ul>
                                 </nav>
