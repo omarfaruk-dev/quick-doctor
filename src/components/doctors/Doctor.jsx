@@ -10,7 +10,7 @@ const Doctor = ({ doctor }) => {
     return (
         <div className='bg-white rounded-2xl p-5 md:p-6  gap-4 md:gap-6 shadow hover:shadow-lg duration-700 transform hover:-translate-y-1'>
             <div>
-                <img className='w-2/3 mx-auto rounded-2xl border-2 border-gray-300' src={image} alt="" />
+                <img className='w-2/3 mx-auto rounded-2xl border-2 border-[#176AE5]' src={image} alt="" />
             </div>
             <div className='space-y-2'>
                 <div className='flex gap-2 flex-wrap items-center mt-5'>

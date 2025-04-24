@@ -1,40 +1,44 @@
 import React from 'react';
 
-import {
-    createBrowserRouter,
-    RouterProvider,
-  } from "react-router";
+import { createBrowserRouter } from "react-router";
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
 import Blogs from '../pages/Blogs';
 import MyBookings from '../pages/MyBookings';
 import ErrorPage from '../pages/ErrorPage';
 import Loader from '../components/ui/Loader';
+import ViewDetails from '../pages/ViewDetails/ViewDetails';
 
-  const router = createBrowserRouter([
-    {
-        path: '/',
-        Component: MainLayout,
-        errorElement: <ErrorPage/>,
-        children: [
-            {
-                index: true,
-                hydrateFallbackElement: <Loader/>,
-                loader: ()=> fetch('doctors.json'),
-                Component: Home
-            },
-            {
-              path: '/my-booking',
-              Component: MyBookings
-            },
-            {
-              path: '/blogs',
-              Component: Blogs
-            },
-        ]
+const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: MainLayout,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        hydrateFallbackElement: <Loader />,
+        loader: () => fetch('doctors.json'),
+        Component: Home
+      },
+      {
+        path: '/doctor-details/:doctorLicense',
+        hydrateFallbackElement: <Loader />,
+        loader: () => fetch('../doctors.json'),
+        Component: ViewDetails
+      },
+      {
+        path: '/my-booking',
+        Component: MyBookings
+      },
+      {
+        path: '/blogs',
+        Component: Blogs
+      },
+    ]
 
-    },
-    
-  ])
+  },
 
-  export default router;
+])
+
+export default router;
