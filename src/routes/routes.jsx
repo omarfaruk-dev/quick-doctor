@@ -28,7 +28,9 @@ const router = createBrowserRouter([
         Component: ViewDetails
       },
       {
-        path: '/my-booking',
+        path: '/my-bookings',
+        hydrateFallbackElement: <Loader />,
+        loader: () => fetch('../doctors.json'),
         Component: MyBookings
       },
       {

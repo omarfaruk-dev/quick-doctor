@@ -3,24 +3,46 @@ import toast from 'react-hot-toast';
 import { FiAlertOctagon } from 'react-icons/fi';
 import { useLoaderData, useNavigate, useParams } from 'react-router';
 import Button from '../../components/ui/Button';
+import { addAppointToLocalStorage } from '../../utils/localStorage';
+import DoctorNotFound from '../DoctorNotFound';
 
 const ViewDetails = () => {
     const navigate = useNavigate();
 
     const doctorsData = useLoaderData();
-    console.log(doctorsData);
     const { doctorLicense } = useParams();
 // console.log(doctorLicense);
     const findDoctor = doctorsData.find(doctor => doctor.license === doctorLicense);
     const { id, image, name, speciality, license, experience, availability, fees } = findDoctor || {}
-    console.log(findDoctor);
+
+    if(!findDoctor) {
+        return <DoctorNotFound doctorLicense={doctorLicense}/>
+    }
 
     // added today date for available or unavailable
     const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
     const isAvailable = availability.includes(today);
 
     // set to local storage handle click function 
-    
+    const handleBookAnAppoint = (id) => {
+        // add lawyer based on availability 
+        if(!isAvailable) {
+            toast.error(`${name} is not available today`);
+            return;
+        }
+
+        const isAdded = addAppointToLocalStorage(id);
+       
+        if (isAdded) {
+            toast.success(`Appointment scheduled for ${name} successfully`);
+             navigate('/my-bookings');
+        } 
+        else {
+            toast.error(`${name} is already added!`);
+        }
+
+    }
+
 
     return (
         <div className='mb-12 mt-2 space-y-6'>
@@ -65,7 +87,7 @@ const ViewDetails = () => {
                         <FiAlertOctagon className='text-lg' /> Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</button>
                     <div className='mt-5 grid' >
                         <Button
-                            // onClick={() => handleBookAnAppoint(id)}
+                            onClick={() => handleBookAnAppoint(id)}
                             label={isAvailable ? 'Book Appointment Now' : 'Un-Available'} />
                     </div>
                 </div>
