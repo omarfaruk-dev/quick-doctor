@@ -8,6 +8,7 @@ const ErrorPage = () => {
     return (
         <div>
             <Nav />
+            <title>404 Not Found</title>
             <div className="min-h-[calc(100vh-85px)] flex flex-col items-center justify-center bg-white px-4 py-12">
                 <img
                     src="https://i.ibb.co.com/pB3FY9n6/404-error.jpg"

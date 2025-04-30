@@ -4,6 +4,7 @@ const Appoints = ({ doctorAppoint, handleDelete }) => {
     const { id, name, speciality, fees } = doctorAppoint;
     return (
         <div>
+            <title>My Bookings</title>
             {/* Book An Appointment  */}
             <div className='border-2 border-gray-300 space-y-3 rounded-2xl p-5 md:p-6 shadow hover:shadow-lg duration-700 transform hover:-translate-y-1'>
                 <div className='flex justify-center sm:justify-between items-center flex-wrap'>

@@ -30,6 +30,7 @@ const MyBookings = () => {
 
     return (
         <div>
+            <title>{appointList}</title>
             <Chart appointList={appointList} />
             {/* header part  */}
             <div className='text-center py-8 md:py-12 space-y-3'>

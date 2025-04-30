@@ -29,6 +29,7 @@ const Blogs = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-10">
+            <title>Blogs - Health Tips</title>
             {/* Category Buttons */}
             <div className="flex flex-wrap gap-3 justify-center mb-8">
                 {categories.map((category) => (

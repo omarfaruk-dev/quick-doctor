@@ -8,6 +8,7 @@ const Contact = () => {
     }
     return (
         <div className="max-w-3xl mx-auto px-4 py-16">
+            <title>Contact Us - Quick Doctor</title>
             <h1 className="text-4xl font-bold text-center mb-6">Contact Us</h1>
             <p className="text-gray-600 text-center mb-10">
                 Have a question or need help? Fill out the form below and we'll get back to you soon.

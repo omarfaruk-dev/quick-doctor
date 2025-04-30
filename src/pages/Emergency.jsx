@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 const Emergency = () => {
     return (
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
+            <title>Emergency ??? Contact Us</title>
             <h1 className="text-4xl font-bold text-red-600 mb-4">Emergency Help</h1>
             <p className="text-gray-700 mb-8">
                 If you're experiencing a medical emergency, we're here to help — 24/7.
